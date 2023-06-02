@@ -7,7 +7,7 @@
 
 void *th_run(void *arg) {
 	int i = (int)arg;
-	printf("this is %dth thread\n", i);
+	printf("this is %dth thread, i'm tid = %lu, pid = %d\n", i, pthread_self(), getpid());
 	return NULL;
 }
 
